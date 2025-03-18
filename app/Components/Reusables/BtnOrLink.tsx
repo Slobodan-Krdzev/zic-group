@@ -22,7 +22,7 @@ const BtnOrLink = ({
     return (
       <Link
         href={link ?? ""}
-        style={{backgroundColor: bgColor, color: textColor}}
+        style={{backgroundColor: bgColor, color: textColor, zIndex: 999}}
         className={`px-6 py-4 rounded-xl border-none outline-none font-sans text-xl font-bold hover:scale-105 transition-transform ease-in-out`}
       >
         {text}
@@ -33,7 +33,7 @@ const BtnOrLink = ({
   return (
     <button
       onClick={clickHandler}
-      style={{backgroundColor: bgColor, color: textColor}}
+      style={{backgroundColor: bgColor, color: textColor, zIndex: 9999}}
 
       className={`px-6 py-4 rounded-xl border-none outline-none font-sans text-xl bg-${bgColor} text-${textColor} font-bold hover:scale-105 transition-transform ease-in-out`}
     >

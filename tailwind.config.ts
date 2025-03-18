@@ -16,7 +16,9 @@ export default {
         textMain: '#4BB3FF',
         textBlue: '#000C1A',
         textGray2: '#999999',
-        gray7: '#18293C'
+        projectsBlue: '#D5EDFF',
+        gray7: '#18293C',
+        footerBlue: '#1D2E42'
       },
       fontFamily: {
         sans: ['Jost', 'sans-serif']
