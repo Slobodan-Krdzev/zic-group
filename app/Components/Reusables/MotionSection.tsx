@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 type MotionSectionPropsType = {
-    children: React.ReactNode | JSX.Element,
+    children: React.ReactNode ,
     className: string
 }
 
