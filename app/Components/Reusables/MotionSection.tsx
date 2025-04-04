@@ -12,7 +12,7 @@ const MotionSection = ({children, className}: MotionSectionPropsType) => {
     <motion.section className={className}
     initial={{opacity: 0}}
     whileInView={{opacity: 1}}
-    viewport={{margin: `-600px`}}
+    viewport={{margin: `-601px`}}
     >{children}</motion.section>
   )
 }

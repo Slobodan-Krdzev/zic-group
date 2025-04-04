@@ -81,7 +81,7 @@ const WorkProcessCaro = () => {
         mousewheel={{ thresholdDelta: 50, sensitivity: 1 }}
         autoplay={{ delay: 7000, disableOnInteraction: false }}
         modules={[Mousewheel, Autoplay]}
-        className="mySwiper w-full lg:w-9/12"
+        className="mySwiper w-full md:w- lg:w-9/12"
             style={{ height: "60vh", margin: "0 auto"}}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
