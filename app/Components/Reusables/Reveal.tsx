@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
 type RevealPropsType = {
-  children: React.ReactNode | JSX.Element;
+  children: React.ReactNode ;
   width?: "fit-content" | "100%";
   bgColor: string
 };

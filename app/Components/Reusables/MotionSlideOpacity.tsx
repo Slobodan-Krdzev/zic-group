@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 type MotionSlideVerticalOpacityPropsType = {
-  children: React.ReactNode | JSX.Element;
+  children: React.ReactNode ;
   duration?: number | string;
   delay?: number;
   direction?: "y" | "x";

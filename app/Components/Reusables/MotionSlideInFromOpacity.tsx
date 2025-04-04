@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 type MotionSlideInFromOpacity = {
-  children: React.ReactNode | JSX.Element;
+  children: React.ReactNode;
   duration?: number | string;
   delay?: number ;
   originVertical?: "top" | "bottom";
