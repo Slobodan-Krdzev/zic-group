@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 
 interface FadeIn {
-    children: JSX.Element | React.ReactNode
+    children: React.ReactNode
 }
 
 export default function FadeIn({ children }: FadeIn) {
