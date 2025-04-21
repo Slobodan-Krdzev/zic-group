@@ -70,8 +70,8 @@ const LogoSlider = () => {
         spaceBetween={5}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: true }}
-        speed={8000} // Adjust speed for smooth motion
-        freeMode={true} // Allows continuous scrolling
+        speed={8000} 
+        freeMode={true} 
       >
         {logos.map((l) => (
           <SwiperSlide

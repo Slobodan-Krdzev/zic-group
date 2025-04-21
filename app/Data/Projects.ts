@@ -7,7 +7,7 @@ export const projects: Project[] = [
     title: "Triumph Motorcycles North Macedonia",
     client: "Triumph Motorcycles",
     link: "https://www.triumphmotorcycles.mk/",
-    clientLogo: "/Logos/triumphLogo.webp",
+    clientLogo: "/logos/triumphLogo.webp",
     desc: "We developed the official website for Triumph Motorcycles Macedonia, following the global Triumph brand identity. The site is a localized version of the official Triumph website, ensuring consistency across countries while offering a tailored experience for the Macedonian market.",
     responsibilities: [
       "Frontend in Next.js: Built a fast, SEO-friendly, and responsive frontend that mirrors the official Triumph site layout and experience.",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     title: "Click-Tint",
     client: "Click-Tint",
     link: "https://click-tint.com/en",
-    clientLogo: "/Logos/clickTintLogo.png",
+    clientLogo: "/logos/clickTintLogo.png",
     desc: "We partnered with Click-Tint, a smart tinting solution, to design and develop their official website. Built with Next.js, the site offers high performance, fast loading, and seamless navigation across all devices.",
     responsibilities: [
       "UX/UI Design: Clean, modern, and intuitive interface aligned with the brand’s identity.",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     title: "Rigo",
     client: "Rigo",
     link: "https://click-tint.com/en",
-    clientLogo: "/Logos/clickTintLogo.png",
+    clientLogo: "/logos/clickTintLogo.png",
     desc: "We partnered with Click-Tint, a smart tinting solution, to design and develop their official website. Built with Next.js, the site offers high performance, fast loading, and seamless navigation across all devices.",
     responsibilities: [
       "UX/UI Design: Clean, modern, and intuitive interface aligned with the brand’s identity.",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     title: "Photosession",
     client: "Photosession",
     link: "https://click-tint.com/en",
-    clientLogo: "/Logos/clickTintLogo.png",
+    clientLogo: "/logos/clickTintLogo.png",
     desc: "We partnered with Click-Tint, a smart tinting solution, to design and develop their official website. Built with Next.js, the site offers high performance, fast loading, and seamless navigation across all devices.",
     responsibilities: [
       "UX/UI Design: Clean, modern, and intuitive interface aligned with the brand’s identity.",
