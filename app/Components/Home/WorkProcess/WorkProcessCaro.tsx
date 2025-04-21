@@ -70,91 +70,99 @@ const CarousellItems: CorousellItemType[] = [
 ];
 
 const WorkProcessCaro = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-  
-    return (
-      <Swiper
-        direction="vertical"
-        speed={800}
-        loop={true}
-        pagination={false}
-        mousewheel={{ thresholdDelta: 50, sensitivity: 1 }}
-        autoplay={{ delay: 7000, disableOnInteraction: false }}
-        modules={[Mousewheel, Autoplay]}
-        className="mySwiper w-full md:w- lg:w-9/12"
-            style={{ height: "60vh", margin: "0 auto"}}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-      >
-        {CarousellItems.map((item, idx) => {
-          const isActive = idx === activeIndex;
-  
-          return (
-            <SwiperSlide
-              key={item.id}
-              className="bg-contain bg-right"
-              style={{
-                backgroundImage: "url(/lines.png)",
-                backgroundRepeat: "no-repeat",
-                maskImage: "linear-gradient(to right, #afadad, rgba(0, 0, 0, 0.2))",
-              }}
-            >
-              <div className="flex justify-start items-center gap-16 px-6 py-8 h-full">
-                
+  const [activeIndex, setActiveIndex] = useState(0);
 
-                <motion.div
-                  className="w-1/6 text-[400px] font-bold flex justify-center items-center"
-                  style={{ color: "#131E2C" }}
+  return (
+    <Swiper
+      direction="vertical"
+      speed={800}
+      loop={true}
+      pagination={false}
+      mousewheel={{ thresholdDelta: 50, sensitivity: 1 }}
+      autoplay={{ delay: 7000, disableOnInteraction: false }}
+      modules={[Mousewheel, Autoplay]}
+      className="mySwiper w-full md:w- lg:w-9/12"
+      style={{ height: "60vh", margin: "0 auto" }}
+      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+    >
+      {CarousellItems.map((item, idx) => {
+        const isActive = idx === activeIndex;
+
+        return (
+          <SwiperSlide
+            key={item.id}
+            className="bg-contain bg-right "
+            style={{
+              backgroundImage: "url(/lines.png)",
+              backgroundRepeat: "no-repeat",
+              maskImage:
+                "linear-gradient(to right, #afadad, rgba(0, 0, 0, 0.2))",
+            }}
+          >
+            <div className="flex justify-start items-center gap-16 px-6 py-8 h-full">
+              <motion.div
+                className="hidden w-1/6 text-[400px] font-bold lg:flex justify-center items-center"
+                style={{ color: "#131E2C" }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={
+                  isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                }
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                {idx + 1}
+              </motion.div>
+
+              <div className="w-full lg:w-3/6">
+                <motion.h3
+                  className="text-3xl lg:text-5xl font-bold text-textMain mb-2"
                   initial={{ opacity: 0, y: 50 }}
-                  animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  animate={
+                    isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                  }
+                  transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
                 >
-                  {idx + 1}
-                </motion.div>
-  
-                <div className="w-3/6">
-                  <motion.h3
-                    className="text-5xl font-bold text-textMain mb-2"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                    transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
-                  >
-                    {item.title1}
-                  </motion.h3>
-  
-                  <motion.p
-                    className="text-xl"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
-                  >
-                    {item.desc1}
-                  </motion.p>
-  
-                  <motion.h3
-                    className="text-5xl font-bold text-textMain mb-2 mt-6"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                    transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-                  >
-                    {item.title2}
-                  </motion.h3>
-  
-                  <motion.p
-                    className="text-xl"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
-                  >
-                    {item.desc2}
-                  </motion.p>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    );
-  };
+                  {item.title1}
+                </motion.h3>
 
+                <motion.p
+                  className="text-base lg:text-xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
+                >
+                  {item.desc1}
+                </motion.p>
+
+                <motion.h3
+                  className="text-3xl lg:text-5xl font-bold text-textMain mb-2 mt-6"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={
+                    isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                  }
+                  transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
+                >
+                  {item.title2}
+                </motion.h3>
+
+                <motion.p
+                  className="text-base lg:text-xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+                >
+                  {item.desc2}
+                </motion.p>
+              </div>
+            </div>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
+  );
+};
 
 export default WorkProcessCaro;

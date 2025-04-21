@@ -23,7 +23,7 @@ const WhatWeDoSingleItem = ({ item }: WhatWeDoSignleItemPropstype) => {
         alt="Item"
         width={135}
         height={100}
-        className="absolute bottom-0 right-5"
+        className="absolute bottom-0 right-5 opacity-40 xl:opacity-100"
       />
 
       <Image

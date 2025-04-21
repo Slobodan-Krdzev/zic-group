@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
-import "./globals.css";
 import Footer from "./Components/Footer/Footer";
+import "./globals.css";
+import MobileNav from "./Components/Navbars/MobileNav";
+import Navbar from "./Components/Navbars/Navbar";
+import MotionSlideOpacity from "./Components/Reusables/MotionSlideOpacity";
 
 const jostSans = Jost({
   variable: "--font-jost-sans",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "ZicGroup",
@@ -21,9 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jostSans.variable} antialiased`}
-      >
+      <body className={`${jostSans.variable} antialiased`}>
+      <MotionSlideOpacity direction="y">
+        <Navbar />
+
+        <MobileNav />
+      </MotionSlideOpacity>
         {/* <Navbar /> */}
         {children}
         <Footer />
