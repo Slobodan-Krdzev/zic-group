@@ -19,28 +19,28 @@ export const ourWorkContent: OurWorkSingleProjectType[] = [
     title: "ClickTint",
     branch: "Web Development",
     image: "",
-    logo: "/logos/clickTintLogoBlack.png",
+    logo: "/Logos/clickTintLogoBlack.png",
   },
   {
     id: 2,
     title: "Triumph Motorcycles Macedonia",
     branch: "Web Development",
     image: "",
-    logo: "/logos/triumphLogoBlack.png",
+    logo: "/Logos/triumphLogoBlack.png",
   },
   {
     id: 3,
     title: "Masazeri.mk",
     branch: "Web Development",
     image: "",
-    logo: "/logos/masazeriLogo.png",
+    logo: "/Logos/masazeriLogo.png",
   },
   {
     id: 4,
     title: "Smart-Locks",
     branch: "Web Development",
     image: "",
-    logo: "/logos/smatlLocksLogo.webp",
+    logo: "/Logos/smatlLocksLogo.webp",
   },
 ];
 

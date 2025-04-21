@@ -14,48 +14,47 @@ const logos: {
 }[] = [
   {
     id: 1,
-    logo: "/logos/triumphLogo.webp",
+    logo: "/Logos/triumphLogo.webp",
     link: "https://www.triumphmotorcycles.mk/",
   },
   {
     id: 2,
-    logo: "/logos/clickTintLogo.png",
+    logo: "/Logos/clickTintLogo.png",
     link: "https://click-tint.com/en",
   },
   {
     id: 3,
-    logo: "/logos/masazeriLogo.png",
+    logo: "/Logos/masazeriLogo.png",
     link: "https://www.masazeri.mk/",
   },
   {
     id: 4,
-    logo: "/logos/smatlLocksLogo.webp",
+    logo: "/Logos/smatlLocksLogo.webp",
     link: "https://www.smartlocks.mk/en",
   },
   {
     id: 5,
-    logo: "/logos/triumphLogo.webp",
+    logo: "/Logos/triumphLogo.webp",
     link: "https://www.triumphmotorcycles.mk/",
   },
   {
     id: 6,
-    logo: "/logos/clickTintLogo.png",
+    logo: "/Logos/clickTintLogo.png",
     link: "https://click-tint.com/en",
   },
   {
     id: 7,
-    logo: "/logos/masazeriLogo.png",
+    logo: "/Logos/masazeriLogo.png",
     link: "https://www.masazeri.mk/",
   },
   {
     id: 8,
-    logo: "/logos/smatlLocksLogo.webp",
+    logo: "/Logos/smatlLocksLogo.webp",
     link: "https://www.smartlocks.mk/en",
   },
 ];
 
 const LogoSlider = () => {
-  console.log(logos);
 
   return (
     <MotionSlideOpacity
