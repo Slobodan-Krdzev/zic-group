@@ -30,7 +30,7 @@ const Contact = () => {
 
         <Image
           style={{ zIndex: 9 }}
-          className="absolute top-1/2 right-1/2 -translate-x-1/2 md:translate-x-0 -translate-y-1/3 opacity-25 lg:bottom-0 lg:right-0"
+          className="hidden lg:block absolute top-1/2 right-1/2 -translate-x-1/2 md:translate-x-0 -translate-y-1/3 opacity-25 lg:bottom-0 lg:right-0"
           src={"/SVG/ZicTrademark.png"}
           alt="Zic Trademark Logo"
           width={300}

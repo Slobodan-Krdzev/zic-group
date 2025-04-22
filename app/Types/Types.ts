@@ -16,6 +16,7 @@ export interface Project {
     client: string,
     link: string,
     clientLogo: string,
+    logowidth: number,
     techStack?: TechStackItem[],
     gearUsed?: string[]
     desc: string,

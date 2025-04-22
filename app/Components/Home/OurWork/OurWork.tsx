@@ -1,9 +1,7 @@
-
-import React from "react";
-import H2SectionTitle from "../../Reusables/H2SectionTitle";
-import SingleProjectItem from "./SingleProjectItem";
 import BtnOrLink from "../../Reusables/BtnOrLink";
+import H2SectionTitle from "../../Reusables/H2SectionTitle";
 import MotionSection from "../../Reusables/MotionSection";
+import SingleProjectItem from "./SingleProjectItem";
 
 export type OurWorkSingleProjectType = {
   id: number;
@@ -13,36 +11,40 @@ export type OurWorkSingleProjectType = {
   logo: string;
 };
 
+
+
 export const ourWorkContent: OurWorkSingleProjectType[] = [
   {
-    id: 1,
+    id: 2,
     title: "ClickTint",
     branch: "Web Development",
-    image: "",
+    image: "/projects/clicktint/clicktintThumbnail.png",
     logo: "/Logos/clickTintLogoBlack.png",
   },
   {
-    id: 2,
+    id: 1,
     title: "Triumph Motorcycles Macedonia",
     branch: "Web Development",
-    image: "",
+    image: "/projects/triumph/triumphThumbnailSmall.webp",
+
     logo: "/Logos/triumphLogoBlack.png",
   },
   {
     id: 3,
     title: "Masazeri.mk",
     branch: "Web Development",
-    image: "",
+    image: "/projects/massage/masazeriThumbnail.png",
     logo: "/Logos/masazeriLogo.png",
   },
   {
-    id: 4,
+    id: 7,
     title: "Smart-Locks",
     branch: "Web Development",
-    image: "",
+    image: "/projects/locks/lockThumbnail.png",
     logo: "/Logos/smatlLocksLogo.webp",
   },
 ];
+
 
 const OurWork = () => {
   return (
@@ -59,7 +61,7 @@ const OurWork = () => {
         <div className="flex justify-center mt-12">
           <BtnOrLink
             text={"See all our work!"}
-            isLink={false}
+            isLink={true}
             link="/projects"
           />
         </div>

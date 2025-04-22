@@ -101,7 +101,7 @@ const Filters = () => {
         {filteredProjects.map((project) => (
           <Link href={`/projects/${project.id}`} key={project.id} className="group hover:scale-105 transition ease-in-out ">
             {/* TOP PART */}
-            <div className="flex justify-between gap-4 pb-4">
+            <div className="flex justify-between gap-4 pb-4 max-h-[200px] min-h-[200px]">
               <div className="relative flex flex-col w-2/4 justify-center py-12 bg-proj glowing-background-whatWeDoSection">
                 <div className="absolute top-2 left-2 flex items-center gap-1">
                   <Image
@@ -125,8 +125,9 @@ const Filters = () => {
                 <Image
                   src={project.clientLogo}
                   alt="Zic Logo"
-                  width={150}
+                  width={project.logowidth}
                   height={50}
+                  className="max-w-[120px] max-h-[60px]"
                 />
               </div>
 
