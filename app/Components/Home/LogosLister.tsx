@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MotionSlideOpacity from "../Reusables/MotionSlideOpacity";
 
-const logos: {
+export const logos: {
   id: number;
   logo: string;
   link: string;
@@ -29,6 +29,26 @@ const logos: {
     logo: "/Logos/smatlLocksLogo.webp",
     link: "https://www.smartlocks.mk/en",
   },
+  {
+    id: 5,
+    logo: "/Logos/Rigo.png",
+    link: "https://zk.mk/rigo-impeks-1",
+  },
+  {
+    id: 6,
+    logo: "/Logos/skyhotel-logo.png",
+    link: "https://hotelsky.mk/",
+  },
+  {
+    id: 7,
+    logo: "/Logos/aprilLogo.png",
+    link: "https://www.apriltwentytwo.com/",
+  },
+  {
+    id: 8,
+    logo: "/Logos/logo-ilios.png",
+    link: "https://iliosco.mk/",
+  },
 ];
 
 const LogosLister = () => {
@@ -37,7 +57,7 @@ const LogosLister = () => {
       direction="y"
       verticalPosition={100}
       delay={0.5}
-      className="lg:flex flex-wrap justify-between items-center absolute bottom-5 left-0 right-0 hidden lg:w-2/4 m-auto"
+      className="lg:flex flex-wrap justify-between items-center absolute bottom-5 left-0 right-0 hidden lg:w-2/4 m-auto gap-y-[5vh]"
     >
       {logos.map((l) => (
         <Link
@@ -49,9 +69,9 @@ const LogosLister = () => {
           <Image
             src={l.logo}
             alt={l.link}
-            width={150}
+            width={l.id === 5 || l.id === 8 ? 80 : 150}
             height={100}
-            className="transition-all hover:scale-105 ease-in-out"
+            className="transition-all hover:scale-105 ease-in-out max-h-[80px]"
           />
         </Link>
       ))}

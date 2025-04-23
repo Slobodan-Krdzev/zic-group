@@ -6,53 +6,7 @@ import Image from "next/image";
 import "swiper/css";
 import Link from "next/link";
 import MotionSlideOpacity from "../Reusables/MotionSlideOpacity";
-
-const logos: {
-  id: number;
-  logo: string;
-  link: string;
-}[] = [
-  {
-    id: 1,
-    logo: "/Logos/triumphLogo.webp",
-    link: "https://www.triumphmotorcycles.mk/",
-  },
-  {
-    id: 2,
-    logo: "/Logos/clickTintLogo.png",
-    link: "https://click-tint.com/en",
-  },
-  {
-    id: 3,
-    logo: "/Logos/masazeriLogo.png",
-    link: "https://www.masazeri.mk/",
-  },
-  {
-    id: 4,
-    logo: "/Logos/smatlLocksLogo.webp",
-    link: "https://www.smartlocks.mk/en",
-  },
-  {
-    id: 5,
-    logo: "/Logos/triumphLogo.webp",
-    link: "https://www.triumphmotorcycles.mk/",
-  },
-  {
-    id: 6,
-    logo: "/Logos/clickTintLogo.png",
-    link: "https://click-tint.com/en",
-  },
-  {
-    id: 7,
-    logo: "/Logos/masazeriLogo.png",
-    link: "https://www.masazeri.mk/",
-  },
-  {
-    id: 8,
-    logo: "/Logos/smatlLocksLogo.webp",
-    link: "https://www.smartlocks.mk/en",
-  },
-];
+import { logos } from "./LogosLister";
 
 const LogoSlider = () => {
 
@@ -61,7 +15,7 @@ const LogoSlider = () => {
       direction="y"
       verticalPosition={100}
       delay={0.5}
-      className="absolute bottom-10 left-0 right-0 w-full m-auto lg:hidden"
+      className="absolute bottom-[1vh] left-0 right-0 w-full m-auto lg:hidden"
     >
       <Swiper
         modules={[Autoplay]}
@@ -88,7 +42,7 @@ const LogoSlider = () => {
                 alt={`Logo ${l.logo}`}
                 width={100}
                 height={100}
-                className="logosFilter h-full object-contain"
+                className="logosFilter h-full object-contain max-h-[60px]"
               />
             </Link>
           </SwiperSlide>

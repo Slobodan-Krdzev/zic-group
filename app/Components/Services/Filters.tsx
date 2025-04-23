@@ -97,7 +97,7 @@ const Filters = () => {
         </div>
       </div>
 
-      <div className="m-auto w-[90%] md:w-[70%] lg:w-[75%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 2xl:gap-10">
+      <div className="m-auto w-[90%] md:w-[70%] lg:w-[75%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
         {filteredProjects.map((project) => (
           <Link href={`/projects/${project.id}`} key={project.id} className="group hover:scale-105 transition ease-in-out ">
             {/* TOP PART */}

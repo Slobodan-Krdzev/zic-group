@@ -1,5 +1,5 @@
 import BtnOrLink from "../Reusables/BtnOrLink";
-import MotionSlideInFromOpacity from "../Reusables/MotionSlideInFromOpacity";
+import MotionSlideInFromOpacity from "../Reusables/MotionSlideInFromOpacity"; 
 import MotionSlideOpacity from "../Reusables/MotionSlideOpacity";
 import LogoSlider from "./LogoSlider";
 import LogosLister from "./LogosLister";
