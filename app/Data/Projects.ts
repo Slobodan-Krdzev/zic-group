@@ -166,7 +166,7 @@ export const projects: Project[] = [
         "Rigo Impex, a distinguished winery known for its dedication to tradition and quality, to create a cinematic advertisement that captures the heart of their craft. ",
       desc: "Shot on-location at their vineyard, the video brings to life the beauty of the land and the passion behind every bottle.",
     },
-    videoGallery: ["/projects/rigo/rigo.mov"],
+    videoGallery: ["https://i.imgur.com/CWQmrBx.mp4"],
   },
   {
     id: 5,
@@ -206,7 +206,7 @@ export const projects: Project[] = [
         "Sky Hotel offers luxurious rooms, a serene spa, and a refined experience designed for total relaxation and indulgence.",
       desc: "The goal of the video is to showcase the hotel’s luxurious experience, helping guests instantly connect with its comfort, elegance, and premium amenities.",
     },
-    videoGallery: ["/projects/sky/promoVideo.mp4"],
+    videoGallery: ["https://i.imgur.com/Tm779Wr.mp4"],
   },
   {
     id: 6,
@@ -245,7 +245,7 @@ export const projects: Project[] = [
         "Ilios Co an agricultural company - premium vegetables from their lush fields and unwavering commitment to quality.",
       desc: "Wide-angle, natural daytime shots capture the expansive fields, while intimate close-ups reveal the care in every harvest—brought to life.",
     },
-    videoGallery: ["/projects/ilios/iliosVideo.mp4"],
+    videoGallery: ["https://i.imgur.com/RCyP3Vs.mp4"],
   },
   {
     id: 7,
@@ -326,6 +326,6 @@ export const projects: Project[] = [
         "Biodegradable tights with Aloe Vera and colored with organic colors.",
       desc: "Skin & Style. Made with AMNI-SOUL technology that decomposes fast & clearing your conscience in consumption.",
     },
-    videoGallery: ["/projects/april/re-editapril.mp4"],
+    videoGallery: ["https://i.imgur.com/vVU2QvY.mp4"],
   },
 ];
