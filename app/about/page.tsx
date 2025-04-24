@@ -8,7 +8,7 @@ const AboutUsPage = () => {
   return (
     <section className="glowing-background min-h-[150dvh] h-auto">
       <div className="hero-content px-2 mt-32 lg:mt-44 xl:mt-48 2xl:mt-54 text-center lg:text-left w-full lg:w-9/12 m-auto flex items-center lg:items-start lg:justify-between justify-center">
-        <div className="w-full md:w-9/12 lg:w-8/12 ">
+        <div className="w-full md:w-7/12 lg:w-8/12 ">
           <MotionSlideInFromOpacity originVertical={"bottom"}>
             <h1 className="text-4xl lg:text-5xl 2xl:text-7xl font-extrabold tracking-tighter mb-8 inline-block">
               We started as <span className=" text-textMain">two</span> curious

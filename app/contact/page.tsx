@@ -1,5 +1,6 @@
 import ContactForm from "../Components/Home/Contact/Form";
 import MotionSlideInFromOpacity from "../Components/Reusables/MotionSlideInFromOpacity";
+import MotionSlideOpacity from "../Components/Reusables/MotionSlideOpacity";
 
 const ContactPage = () => {
   return (
@@ -19,7 +20,9 @@ const ContactPage = () => {
           </p>
         </MotionSlideInFromOpacity>
       </div>
-      <ContactForm />
+      <MotionSlideOpacity delay={0.5}>
+        <ContactForm />
+      </MotionSlideOpacity>
     </section>
   );
 };

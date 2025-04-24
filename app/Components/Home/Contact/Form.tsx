@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, ChangeEvent } from "react";
+import GreenBeepLight from "../../Reusables/GreenBeepLight";
 
 type FormData = {
   name: string;
@@ -56,8 +57,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-20 w-[90%] lg:w-[75%] m-auto">
-      <form className=" text-white font-sans  basis-full lg:basis-1/2">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <form className=" text-white font-sans  basis-full lg:basis-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <input
             name="name"
             className="bg-[#1a2235] p-3 rounded w-full outline-none"
@@ -86,7 +86,6 @@ const ContactForm: React.FC = () => {
             value={formData.company}
             onChange={handleInputChange}
           />
-        </div>
 
         <p className="mb-2 text-sm text-gray-400">Requesting services:</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
@@ -122,7 +121,8 @@ const ContactForm: React.FC = () => {
       </form>
 
       <div className="basis-full lg:basis-1/2 relative">
-        <h2 className="text-3xl lg:text-5xl font-black tracking-tighter my-6 md:mt-0">
+        <GreenBeepLight />
+        <h2 className="text-3xl lg:text-5xl font-black tracking-tighter my-6 md:mt-4">
           North Macedonia
         </h2>
         <p className="text-xl lg:text-2xl font-semibold tracking-tighter">
