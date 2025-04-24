@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import H2SectionTitle from "../Reusables/H2SectionTitle";
 
 type Filter = {
   id: number;
@@ -48,6 +49,7 @@ const Filters = () => {
 
   return (
     <section id="filters" className="defPadding">
+      <H2SectionTitle text={"Projects"} />
       <div className="flex justify-center items-center gap-4 w-[90%] m-auto mb-16 md:mb-18 lg:mb-20">
         <button className="bg-footerBlue px-12 py-4" onClick={() => handleSelect('')}>All</button>
         <div className="relative inline-block text-left">
@@ -122,20 +124,22 @@ const Filters = () => {
                   {project.client}
                 </h3>
 
-                <Image
+                {project.type === 'web' && <Image
                   src={project.clientLogo}
                   alt="Zic Logo"
                   width={project.logowidth}
                   height={50}
                   className="max-w-[120px] max-h-[60px]"
-                />
+                />}
+                
               </div>
 
+            
               <div className="w-4/6 p-2 flex justify-center items-center">
                 <Image
-                  src={project.thumbnail}
+                  src={project.type === 'video' ? project.clientLogo : project.thumbnail}
                   alt={project.title}
-                  width={400}
+                  width={project.type === 'video' ? 100 : 400}
                   height={300}
                 />
               </div>
