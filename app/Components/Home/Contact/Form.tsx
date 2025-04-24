@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useState, ChangeEvent } from "react";
 import GreenBeepLight from "../../Reusables/GreenBeepLight";
+import { useForm, ValidationError } from "@formspree/react";
+import AllSystemsGoAnime from "../../Reusables/AllSystemsGoAnime";
 
 type FormData = {
   name: string;
@@ -24,6 +26,7 @@ const servicesList: string[] = [
 ];
 
 const ContactForm: React.FC = () => {
+  const [state, handleSubmit] = useForm("xjkwvnvb");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -57,68 +60,110 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-20 w-[90%] lg:w-[75%] m-auto">
-      <form className=" text-white font-sans  basis-full lg:basis-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <input
-            name="name"
-            className="bg-[#1a2235] p-3 rounded w-full outline-none"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-          <input
-            name="email"
-            className="bg-[#1a2235] p-3 rounded w-full outline-none"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-          <input
-            name="phone"
-            className="bg-[#1a2235] p-3 rounded w-full outline-none"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleInputChange}
-          />
-          <input
-            name="company"
-            className="bg-[#1a2235] p-3 rounded w-full outline-none"
-            placeholder="Company Name"
-            value={formData.company}
-            onChange={handleInputChange}
-          />
-
-        <p className="mb-2 text-sm text-gray-400">Requesting services:</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-          {servicesList.map((service) => (
-            <label
-              key={service}
-              className="flex items-center space-x-2 text-sm"
-            >
-              <input
-                type="checkbox"
-                checked={formData.services.includes(service)}
-                onChange={() => toggleService(service)}
-                className="accent-blue-500 bg-[#1a2235] border border-gray-600"
-              />
-              <span>{service}</span>
-            </label>
-          ))}
-        </div>
-
-        <textarea
-          name="message"
-          className="bg-[#1a2235] p-3 rounded w-full h-32 outline-none resize-none"
-          placeholder="Message"
-          value={formData.message}
-          onChange={handleInputChange}
-        />
-        <button
-          type="submit"
-          className="bg-[#1a2235] font-semibold p-3 mt-2 rounded w-full outline-none transition duration-300 hover:bg-gradient-to-br from-[#04142c] via-[#003366] to-[#1D2E42] hover:shadow-[0_0_10px_rgba(0,116,228,0.5)] transform origin-center"
+      {!state.succeeded && (
+        <form
+          onSubmit={handleSubmit}
+          className=" text-white font-sans  basis-full lg:basis-1/2"
         >
-          Send!
-        </button>
-      </form>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <input
+              name="name"
+              className="bg-[#1a2235] p-3 rounded w-full outline-none"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+            <input
+              name="email"
+              className="bg-[#1a2235] p-3 rounded w-full outline-none"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+
+            <input
+              name="phone"
+              className="bg-[#1a2235] p-3 rounded w-full outline-none"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleInputChange}
+            />
+            <ValidationError
+              prefix="Phone"
+              field="phone"
+              errors={state.errors}
+            />
+
+            <input
+              name="company"
+              className="bg-[#1a2235] p-3 rounded w-full outline-none"
+              placeholder="Company Name"
+              value={formData.company}
+              onChange={handleInputChange}
+            />
+            <ValidationError
+              prefix="Company"
+              field="company"
+              errors={state.errors}
+            />
+          </div>
+
+          <p className="mb-2 text-sm text-gray-400">Requesting services:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+            {servicesList.map((service) => (
+              <label
+                key={service}
+                className="flex items-center space-x-2 text-sm"
+              >
+                <input
+                  type="checkbox"
+                  checked={formData.services.includes(service)}
+                  onChange={() => toggleService(service)}
+                  className="accent-blue-500 bg-[#1a2235] border border-gray-600"
+                />
+                <span>{service}</span>
+              </label>
+            ))}
+          </div>
+
+          <textarea
+            name="message"
+            className="bg-[#1a2235] p-3 rounded w-full h-32 outline-none resize-none"
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleInputChange}
+          />
+          <button
+            type="submit"
+            className="bg-[#1a2235] font-semibold p-3 mt-2 rounded w-full outline-none transition duration-300 hover:bg-gradient-to-br from-[#04142c] via-[#003366] to-[#1D2E42] hover:shadow-[0_0_10px_rgba(0,116,228,0.5)] transform origin-center"
+          >
+            Send!
+          </button>
+        </form>
+      )}
+      {state.succeeded && (
+        <div className="flex flex-col items-center">
+          <AllSystemsGoAnime />
+          <h2 className="text-3xl lg:text-5xl font-black tracking-tighter my-6 md:mt-4">
+            Congrats
+          </h2>
+          <p className="text-xl lg:text-2xl font-semibold tracking-tighter">
+            The icebreaker step is made...now it&rsquo;s up to us!
+          </p>
+          <p className="text-base lg:text-lg font-semibold tracking-tighter">
+            Our team will surely contact you!
+          </p>
+        </div>
+      )}
 
       <div className="basis-full lg:basis-1/2 relative">
         <GreenBeepLight />
