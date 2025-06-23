@@ -9,22 +9,32 @@ import MotionSlideOpacity from "../Reusables/MotionSlideOpacity";
 import { logos } from "./LogosLister";
 
 const LogoSlider = () => {
-
   return (
     <MotionSlideOpacity
       direction="y"
       verticalPosition={100}
       delay={0.5}
-      className="absolute bottom-[1vh] left-0 right-0 w-full m-auto lg:hidden"
+      className="absolute bottom-[1vh] left-0 right-0 w-full m-auto "
+      key={'123'}
     >
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={3}
-        spaceBetween={5}
+        spaceBetween={8}
         loop={true}
-        autoplay={{ delay: 0, disableOnInteraction: true }}
-        speed={8000} 
-        freeMode={true} 
+        autoplay={{ delay: 0, disableOnInteraction: false }}
+        speed={5000}
+        freeMode={false}
+        breakpoints={{
+          0: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        }}
       >
         {logos.map((l) => (
           <SwiperSlide
@@ -40,8 +50,8 @@ const LogoSlider = () => {
               <Image
                 src={l.logo}
                 alt={`Logo ${l.logo}`}
-                width={100}
-                height={100}
+                width={300}
+                height={300}
                 className="logosFilter h-full object-contain max-h-[60px]"
               />
             </Link>

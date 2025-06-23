@@ -1,8 +1,7 @@
 import BtnOrLink from "../Reusables/BtnOrLink";
-import MotionSlideInFromOpacity from "../Reusables/MotionSlideInFromOpacity"; 
+import MotionSlideInFromOpacity from "../Reusables/MotionSlideInFromOpacity";
 import MotionSlideOpacity from "../Reusables/MotionSlideOpacity";
 import LogoSlider from "./LogoSlider";
-import LogosLister from "./LogosLister";
 
 const Hero = () => {
   return (
@@ -17,7 +16,7 @@ const Hero = () => {
               <span className="inline text-textMain"> Out Online</span>
             </h1>
           </MotionSlideInFromOpacity>
-          <MotionSlideOpacity delay={0.5} direction="x" verticalPosition={75}>
+          <MotionSlideOpacity delay={0.5} direction="x" verticalPosition={75} key={'OPa'}>
             <p className="lg:hidden tracking-tighter font-medium lg:font-normal text-md lg:text-xl text-white mb-8 w-11/12 md:w-7/12 m-auto lg:m-0">
               Lorem Ipsum has been the industrys standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and
@@ -37,6 +36,7 @@ const Hero = () => {
           direction="x"
           verticalPosition={75}
           className="hidden lg:block w-1/3"
+          key={'PAS'}
         >
           <p className=" tracking-tighter font-normal text-lg 2xl:text-xl text-white mb-12">
             Lorem Ipsum has been the industrys standard dummy text ever since
@@ -50,8 +50,6 @@ const Hero = () => {
           />
         </MotionSlideOpacity>
       </div>
-
-      <LogosLister />
       <LogoSlider />
     </section>
   );

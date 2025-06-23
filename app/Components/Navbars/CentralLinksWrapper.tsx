@@ -4,7 +4,7 @@ import React from "react";
 export const links: { text: string; link: string }[] = [
   {
     text: "Services",
-    link: "/services",
+    link: "/#services",
   },
   {
     text: "About",

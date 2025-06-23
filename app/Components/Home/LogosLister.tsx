@@ -14,11 +14,7 @@ export const logos: {
     logo: "/Logos/triumphLogo.webp",
     link: "https://www.triumphmotorcycles.mk/",
   },
-  {
-    id: 2,
-    logo: "/Logos/clickTintLogo.png",
-    link: "https://click-tint.com/en",
-  },
+ 
   {
     id: 3,
     logo: "/Logos/masazeriLogo.png",
@@ -28,6 +24,11 @@ export const logos: {
     id: 4,
     logo: "/Logos/smatlLocksLogo.webp",
     link: "https://www.smartlocks.mk/en",
+  },
+   {
+    id: 2,
+    logo: "/Logos/clickTintLogo.png",
+    link: "https://click-tint.com/en",
   },
   {
     id: 5,
@@ -48,6 +49,11 @@ export const logos: {
     id: 8,
     logo: "/Logos/logo-ilios.png",
     link: "https://iliosco.mk/",
+  },
+  {
+    id: 7,
+    logo: "/Logos/aprilLogo.png",
+    link: "https://www.apriltwentytwo.com/",
   },
 ];
 

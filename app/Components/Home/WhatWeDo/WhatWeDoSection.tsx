@@ -45,7 +45,7 @@ const WhatWeDoSection = () => {
   return (
     <MotionSection className="defPadding glowing-background-whatWeDoSection">
       <>
-        <H2SectionTitle text="What We Do" />
+        <H2SectionTitle text="What We Do"/>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-11/12 lg:w-8/12 m-auto ">
           {whatWeDoContent.map((item) => (

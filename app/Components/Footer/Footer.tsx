@@ -7,50 +7,40 @@ export const footerLists: {
     title: string,
     links: {
         text:string,
-        link: string
+        link?: string
     }[]
 }[] =
  [{
     title: 'Services',
     links: [{
-        text: 'Blog',
-        link: '/blogs'
+        text: 'Web Dev',
     },{
-        text: 'Careers',
-        link: '/careers'
+        text: 'Software',
     },{
-        text: 'Pricing',
-        link: '/pricing'
-    }
+        text: 'Video',
+    },{
+        text: 'Photo',
+    },
+    
 ]
 },{
     title: 'Resources',
     links: [{
-        text: 'Documentation',
-        link: '/documentation'
-    },{
-        text: 'Papers',
-        link: '/papers'
-    },{
-        text: 'Press Conferences',
-        link: '/press'
+        text: 'Our Work',
+        link: '/projects'
     }
 ]
 },{
     title: 'Legal',
     links: [{
-        text: 'Terms of Service',
-        link: '/tearms'
+        text: '+389 78 728 336',
     },{
-        text: 'Privacy Policy',
-        link: '/policy'
+        text: 'info@zicgroupbpo.com',
     },{
-        text: 'Cookies',
-        link: '/cookies'
+        text: 'Belgradska 16',
     },
     {
-        text: 'Data Processing',
-        link: '/data'
+        text: 'Gevgelija, N.Macedonia',
     }
 ]
 }];
@@ -60,13 +50,13 @@ export const socialIcons:{
     link: string
 }[] = [{
     icon: "/linkedin.png",
-    link: '/1'
+    link: 'https://www.linkedin.com/company/zic-group-bpo/'
 },{
     icon: "/facebook.png",
-    link: '/2'
+    link: 'https://www.facebook.com/zicgroupbpo'
 },{
-    icon: "/youtube.png",
-    link: '/3'
+    icon: "/instagram.png",
+    link: 'https://www.instagram.com/zicgroupbpo'
 }]
 
 const Footer = () => {
@@ -86,7 +76,7 @@ const Footer = () => {
             {footerLists.map(list => <div key={list.title}>
                 <h4 className="mb-6 font-semibold text-xl">{list.title}</h4>
                 <ul>
-                    {list.links.map(link => <li key={link.link} className="mb-4"><Link href={link.link} className="hover:text-textMain transition-all ease-in-out hover:scale-105">{link.text}</Link></li>)}
+                    {list.links.map(link => (link.link ? <li key={link.link} className="mb-4"><Link href={link.link} className="hover:text-textMain transition-all ease-in-out hover:scale-105">{link.text}</Link></li> : <p key={link.text} className="hover:text-textMain transition-all ease-in-out hover:scale-105">{link.text}</p>) )}
                 </ul>
             </div>)}
           </div>
@@ -95,7 +85,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-start justify-between md:items-center gap-6 pt-6">
             <p className="w-full md:w-1/2">© 2025 ZICGROUPBPO All rights reserved</p>
             <div className="w-full md:w-1/2 flex justify-start md:justify-end items-center gap-12">
-                {socialIcons.map(icon => <Link href={icon.link} key={icon.link}><Image src={icon.icon} alt={icon.link} width={30} height={30}/></Link>)}
+                {socialIcons.map(icon => <Link href={icon.link} key={icon.link} target="_blank"><Image src={icon.icon} alt={icon.link} width={30} height={30}/></Link>)}
             </div>
         </div>
       </div>

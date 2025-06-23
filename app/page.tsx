@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhatWeDoSection />
+      <section id="services"><WhatWeDoSection /></section>
+      
       <OurWork />
       <WorkProcessSection />
       <Contact />
