@@ -7,14 +7,14 @@ import "swiper/css";
 import Link from "next/link";
 import MotionSlideOpacity from "../Reusables/MotionSlideOpacity";
 import { logos } from "./LogosLister";
-
+ 
 const LogoSlider = () => {
   return (
     <MotionSlideOpacity
       direction="y"
       verticalPosition={100}
       delay={0.5}
-      className="absolute bottom-[1vh] left-0 right-0 w-full m-auto "
+      className="absolute bottom-[5dvh] left-0 right-0 w-full m-auto "
       key={'123'}
     >
       <Swiper

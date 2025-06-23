@@ -5,7 +5,7 @@ import LogoSlider from "./LogoSlider";
 
 const Hero = () => {
   return (
-    <section className="glowing-background h-[100dvh]" >
+    <section className="glowing-background h-[100vh] " >
       <div className="hero-content px-2 mt-44 lg:mt-44 xl:mt-48 2xl:mt-64 text-center lg:text-left w-full lg:w-9/12 m-auto flex items-center lg:justify-between justify-center">
         <div className="w-full lg:w-2/3">
           <MotionSlideInFromOpacity originVertical={"bottom"}>
