@@ -124,8 +124,7 @@ export const projects: Project[] = [
     thumbnail: "/projects/massage/masazeriThumbnail.png",
     projectCardInfo: {
       type: "Web Development",
-      title:
-        "Masazeri.mk, a premium automatic massage chair provider.",
+      title: "Masazeri.mk, a premium automatic massage chair provider.",
       desc: "The goal of the website is to promote their flagship chair and showcase the full range of advanced features, the site delivers a smooth and engaging user experience across all devices.",
     },
   },
@@ -261,7 +260,7 @@ export const projects: Project[] = [
       "Responsive Development: Optimized for seamless navigation across all devices, ensuring a consistent experience whether on desktop, tablet, or mobile",
       "Content Strategy & Visuals: Clear presentation of smart lock features, including remote access, keyless entry, and advanced security options.",
       "Multilingual Setup: Scalable for global audiences with initial English version, ready for expansion into multiple languages.",
-      "Contact & Seller Integration: Simple and efficient contact form, along with seller integration for quick inquiries and direct communication with potential customers."
+      "Contact & Seller Integration: Simple and efficient contact form, along with seller integration for quick inquiries and direct communication with potential customers.",
     ],
     techStack: [
       {
@@ -284,8 +283,7 @@ export const projects: Project[] = [
     thumbnail: "/projects/locks/lockThumbnail.png",
     projectCardInfo: {
       type: "Web Development",
-      title:
-        "Smart Locks - A leading smart lock provider.",
+      title: "Smart Locks - A leading smart lock provider.",
       desc: "Built to showcase Smart Locks's pallete of innovative smart locks and highlight their advanced security features, the site ensures a seamless and engaging user experience across all devices..",
     },
   },
@@ -327,5 +325,43 @@ export const projects: Project[] = [
       desc: "Skin & Style. Made with AMNI-SOUL technology that decomposes fast & clearing your conscience in consumption.",
     },
     videoGallery: ["https://i.imgur.com/vVU2QvY.mp4"],
+  },
+  {
+    id: 9,
+    type: "video",
+    title: "Ljupco & Marina Transport",
+    client: "Ljupco & Marina Transport",
+    link: "https://ljupcomarina.com/",
+    clientLogo: "/Logos/ljupco.webp",
+    logowidth: 150,
+    desc: "We collaborated with Ljupco & Marina Transport, a regional transport company based in Gevgelija, to produce a cinematic video showcasing their extensive fleet of lorries and the logistics expertise powering their daily operations. The focus was on capturing the scale, efficiency, and precision of their transportation workflow—highlighting the dedication, teamwork, and reliability that define Ljupco & Marina Transport.",
+    responsibilities: [
+      "Cinematography: Wide-angle shots to emphasize the impressive size of the fleet, combined with detailed close-ups of vehicles and drivers in action.",
+      "Stabilized Motion: Smooth tracking and transition shots captured using the Zhiyun Crane 2, bringing dynamic movement to scenes of loading, driving, and fleet maintenance.",
+      "Visual Storytelling: An authentic portrayal of the transport process—showcasing the professionalism, coordination, and operational rhythm of the company.",
+      "Color & Mood: Shot in natural light with subtle grading to maintain the crispness of the vehicles and the industrial environment.",
+    ],
+    techStack: [
+      {
+        name: "Sony A7III",
+        logo: "/Logos/sony-2-logo-svgrepo-com.png",
+      },
+      {
+        name: "DaVinci Resolve",
+        logo: "/Logos/davinci-resolve-logo-hero.png",
+      },
+      {
+        name: "Zhiyun Crane 2",
+        logo: "/Logos/zhiyunLogo.png",
+      },
+    ],
+    thumbnail: "/projects/ljupco/thumb.png",
+    projectCardInfo: {
+      type: "Video",
+      title: "Efficient Fleet in Motion: Nikola & Marina Transport",
+      desc: "Showcasing reliable logistics and seamless fleet operations that keep goods moving across the region with the help of a fleet of modern trucks nad trailers.",
+    },
+
+    videoGallery: ["https://i.imgur.com/vslaBOR.mp4"],
   },
 ];
